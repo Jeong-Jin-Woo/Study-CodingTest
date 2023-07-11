@@ -15,6 +15,8 @@ public class Chapter_1_모험가길드 {
 		for(int i=0; i<n; i++) {
 			i += arr[i]-1;
 			answer++;
+			if(i < n)
+				break;
 		}
 		System.out.println(answer);
 	}
