@@ -1,56 +1,50 @@
 import java.util.*;
 public class Chapter13_20_감시피하기 {
 	static int n;
+	static int r = 0;
 	static int[][] map = new int[6][6];
 	static int[][] tmap = new int[6][6];
 	static String chk = "NO";
-	static int cntStudent=0;
 	
 	public static boolean check() {
-		int cnt = 0;
-		for(int i=0; i<n; i++) {
-			for(int j=0; j<n; j++) {
-				if(map[i][j] == 1) {
-					for(int di = i; di >=0; di--) { //상
-						if(map[di][j] == 3) break;
-						tmap[di][j] = 1;
-					}
-					for(int di = i; di < n; di++) { //하
-						if(map[di][j] == 3) break;
-						tmap[di][j] = 1;
-					}
-
-					for(int di = j; di >=0; di--) { //좌
-						if(map[i][di] == 3) break;
-						tmap[i][di] = 1;
-					}
-
-					for(int di = j; di < n; di++) { //우
-						if(map[i][di] == 3) break;
-						tmap[i][di] = 1;
-					}
-				}
-				
-//				System.out.print(tmap[i][j]);
-			}
+	    for(int i=0; i<n; i++) {
+	        for(int j=0; j<n; j++) {
+	            if(map[i][j] == 1) {
+	                int x = i;
+	                int y = j;
+	                
+	                while(x >= 0 && map[x][y] != 3) {
+	                    if(map[x][y] == 2) return false;
+	                    x--;
+	                }
+	                x = i;
+	                
+	                while(x < n && map[x][y] != 3) {
+	                    if(map[x][y] == 2) return false;
+	                    x++;
+	                }
+	                x = i;
+	                
+	                while(y >= 0 && map[x][y] != 3) {
+	                    if(map[x][y] == 2) return false;
+	                    y--;
+	                }
+	                y = j;
+	                
+	                while(y < n && map[x][y] != 3) {
+	                    if(map[x][y] == 2) return false;
+	                    y++;
+	                }
+	                y = j;
+	            }
+//	    		System.out.print(map[i][j]);
+	        }
 //			System.out.println();
-		}
-		for(int i=0; i<n; i++) {
-			for(int j=0; j<n; j++) {
-				if(tmap[i][j] == 2)
-					cnt++;
-			}
-		}
-				if(cnt == cntStudent) 
-					return true;
-		return false;
+	    }
+	    return true; // 모든 위치를 확인하고 감시 가능한 경우라면 true 반환
 	}
-	public static void dfs(int rock, int r) {
-		r++;
-		if(r > n) {
-			chk = "NO";
-			return;
-		}
+
+	public static void dfs(int rock, int cnt) {
 		if(rock == 3) {	
 			for(int i=0; i<n; i++) {
 				for(int j=0; j<n; j++) {
@@ -59,18 +53,18 @@ public class Chapter13_20_감시피하기 {
 			}
 			if(check()) {
 				chk = "YES";
-				return;
 			}
+			return;
 		}
-		for(int i=0; i<n; i++) {
-			for(int j=0; j<n; j++) {
-				if(map[i][j] == 0) {
-					map[i][j] = 3;
-					rock++;
-					dfs(rock, r);
-					map[i][j] = 0;
-					rock--;
-				}
+		for(int i=cnt; i<n*n; i++) {
+			int x = i / n;
+			int y = i % n;
+			if(map[x][y] == 0) {
+				map[x][y] = 3;
+				rock++;
+				dfs(rock, cnt+1);
+				map[x][y] = 0;
+				rock--;
 			}
 		}
 	}
@@ -85,12 +79,10 @@ public class Chapter13_20_감시피하기 {
 				}
 				else if(a.equals("S")) {
 					map[i][j] = 2;
-					cntStudent++;
 				}
 				else {
 					map[i][j] = 0;
 				}
-				tmap[i][j] = map[i][j];
 			}
 		}
 		
