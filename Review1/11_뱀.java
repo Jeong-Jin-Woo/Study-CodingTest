@@ -36,8 +36,8 @@ public class ¹ì{
 	static int[] dx = {0,1,0,-1};
 	static int[] dy = {1,0,-1,0};
 	public static int turn(int direction, char pos) {
-		if(pos == 'L') direction = (direction == 0 ? 3 : direction--);
-		else direction = (direction == 3 ? 0 : direction++);
+		if(pos == 'L') direction = (direction == 0 ? 3 : direction - 1);
+		else direction = (direction == 3 ? 0 : direction + 1);
 		return direction;
 	}
 	public static int simulation() {
@@ -61,16 +61,16 @@ public class ¹ì{
 					pos.offer(new Position(nx,ny));
 				}
 				if(map[nx][ny] == 0) {
-					map[nx][ny] = 2;
-					pos.offer(new Position(nx,ny));
 					Position now = pos.poll();
 					map[now.getX()][now.getY()] = 0;
+					pos.offer(new Position(nx,ny));
+					map[nx][ny] = 2;
 				}
 				count++;
 			}
 			
 			x = nx;
-			y = nx;
+			y = ny;
 			if(index < l && arr.get(index).getTime() == count) {
 				direction = turn(direction, arr.get(index).getLoc());
 				index++;
