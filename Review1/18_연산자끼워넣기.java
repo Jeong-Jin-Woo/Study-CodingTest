@@ -12,25 +12,21 @@ public class 연산자끼워넣기 {
 		else {
 			if(sum > 0) {
 				sum-=1;
-				System.out.print("+");
 				dfs(i+1, now + arr[i]);
 				sum+=1;
 			}
 			if(minus > 0) {
 				minus-=1;
-				System.out.print("-");
 				dfs(i+1, now - arr[i]);
 				minus+=1;
 			}
 			if(div > 0) {
 				div-=1;
-				System.out.print("/");
 				dfs(i+1, now / arr[i]);
 				div+=1;
 			}
 			if(mult > 0) {
 				mult-=1;
-				System.out.print("*");
 				dfs(i+1, now * arr[i]);
 				mult+=1;
 			}
