@@ -1,4 +1,5 @@
-# git Local Repository Control(in gitBash)
+# Git
+## Local Repository Control(in gitBash)
  - git init -> .git 레포지토리를 생성
  - git config --global init.bashBranch main -> branch를 main으로 변경 (확인은 해당 명령어에서 main 제거)
    --> git config --global 변수명 -> git 변수명 확인. (변수명 뒤에 해당 변수명을 바꿀 이름을 적을수 있음)
