@@ -11,39 +11,12 @@ public class Main {
 	static final int INF = (int)1e9;
 	static int n,m;
 	static int dp[];
-//	static ArrayList<ArrayList<Integer>> arr = new ArrayList<>();
-//	static void dfs(int index, int start, int count, boolean visit[]) {
-//		if(start == 1) {
-//			dp[index] = count;
-//			return;
-//		}
-//		visit[start] = true;
-//		for(int i=0; i< arr.get(start).size(); i++) {
-//			if(!visit[arr.get(start).get(i)]) {
-//				visit[arr.get(start).get(i)] = true;
-//				dfs(index, arr.get(start).get(i), count+1, visit);
-//			}
-//		}
-//	}
 	public static void main(String args[]) {
 		Scanner in = new Scanner(System.in);
 		n = in.nextInt();
 		m = in.nextInt();
 		dp = new int[n+1];
-//		for(int i=0; i<=n; i++)
-//			arr.add(new ArrayList<Integer>());
 		Arrays.fill(dp, INF);
-//		for(int i=0; i<m; i++) {
-//			int a = in.nextInt();
-//			int b = in.nextInt();
-//			arr.get(a).add(b);
-//			arr.get(b).add(a);
-//		}
-//		dp[1] = 0;
-//		for(int i=2; i<=n; i++) {
-//			boolean[] visit = new boolean[n+1];
-//			dfs(i, i, 0, visit);
-//		}
 		ArrayList<Position> arr= new ArrayList<>();
 		dp[1] = 0;
 		for(int i=0; i<m; i++) {
