@@ -18,3 +18,17 @@ web socket 학습
 ## 23-11-03
 
 협업필터링 학습
+
+<hr>
+
+## 23-11-04
+
+Spring boot vs Spring
+
+2293
+
+11052 
+
+(11월 9일 review)
+
+자소서.pdf 제작
