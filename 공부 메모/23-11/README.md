@@ -31,4 +31,12 @@ Spring boot vs Spring
 
 (11월 9일 review)
 
+## 23-11-05
+
+12865  (11월 10일 review)
+
+<hr>
+
+## 23-11-06
+
 자소서.pdf 제작
