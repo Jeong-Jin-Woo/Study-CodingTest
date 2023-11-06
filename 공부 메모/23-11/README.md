@@ -39,4 +39,6 @@ Spring boot vs Spring
 
 ## 23-11-06
 
+9252 (11월 11일 review)
+
 자소서.pdf 제작
