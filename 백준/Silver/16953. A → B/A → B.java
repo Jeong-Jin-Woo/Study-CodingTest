@@ -4,28 +4,24 @@ public class Main{
 		Scanner in = new Scanner(System.in);
 		int a = in.nextInt();
 		int b = in.nextInt();
-		int answer = 0;
-		while(true) {
-			if(a > b) {
+		int count = 1;
+		while(b!=a) {
+			if(b < a) {
 				System.out.println(-1);
-				break;
+				return;
 			}
-			if(a == b) {
-				System.out.println(answer + 1);
-				break;
-			}
-			if(b % 10 == 1) {
-				b /= 10;	
-			}
-			else if(b % 2 == 0) {
+			if(b % 2 == 0) {
 				b /= 2;
+			}
+			else if(b % 10 == 1){
+				b /= 10;
 			}
 			else {
 				System.out.println(-1);
-				break;
+				return;
 			}
-			answer += 1;
+			count += 1;
 		}
-		
+		System.out.println(count);
 	}
 }
