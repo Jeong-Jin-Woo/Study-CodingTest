@@ -12,12 +12,14 @@ public class Main {
 		}
 		Arrays.sort(arr);
 		dp[0] = 1;
-		for (int i = 0; i < n; i++) {
-			for (int j = arr[i]; j <= k; j++) {
+		for(int i=0; i<n; i++) {
+			for(int j=arr[i]; j<=k; j++) {
 				dp[j] = dp[j] + dp[j-arr[i]];
 			}
 		}
+//		for(int i=1; i<=k; i++) {
+//			System.out.print(dp[i]+ " ");
+//		}
 		System.out.println(dp[k]);
-		
 	}
 }
