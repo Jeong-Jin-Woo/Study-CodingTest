@@ -56,3 +56,7 @@ Spring boot vs Spring
 프로세스 / 스레드 학습 - 얄코
 
 2589 (11월 12일 review)
+
+## 23-11-10
+
+DataMining 1장 공부
