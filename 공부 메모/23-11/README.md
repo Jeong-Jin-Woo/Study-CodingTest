@@ -57,6 +57,17 @@ Spring boot vs Spring
 
 2589 (11월 12일 review)
 
+<hr>
+
 ## 23-11-10
 
 DataMining 1장 공부
+
+<hr>
+
+## 23-11-11
+
+Main - MySQL <-> MariaDB, Docker Registry
+Sub - PL/SQL 개념 정리
+
+<hr>
