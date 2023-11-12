@@ -71,3 +71,8 @@ Main - MySQL <-> MariaDB, Docker Registry
 Sub - PL/SQL 개념 정리
 
 <hr>
+
+## 23-11-12
+2565 (11월 16일 review)
+
+<hr>
