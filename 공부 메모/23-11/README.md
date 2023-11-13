@@ -68,6 +68,7 @@ DataMining 1장 공부
 ## 23-11-11
 
 Main - MySQL <-> MariaDB, Docker Registry
+
 Sub - PL/SQL 개념 정리
 
 <hr>
@@ -79,5 +80,6 @@ Sub - PL/SQL 개념 정리
 
 ## 23-11-13
 17136 (11월 17일 review)
+
 DM 2장 공부
 <hr>
