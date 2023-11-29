@@ -149,3 +149,15 @@ MySQL 성능 최적화 (우테코)
 
 ★ 1300 (11월 30일 review)
 <hr>
+
+## 23-11-28
+
+이력서 관리
+Random Access, Sequential Access 정리
+<hr>
+
+## 23-11-29
+
+Spring 기초 정리
+<hr>
+
