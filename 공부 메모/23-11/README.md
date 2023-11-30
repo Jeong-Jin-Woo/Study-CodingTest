@@ -143,6 +143,7 @@ dp문제 중 dfs쓴것과, 정렬 + dp 문제 다시 보기
 ## 23-11-26
 
 MySQL 성능 최적화 (우테코)
+-> index
 <hr>
 
 ## 23-11-27
@@ -153,11 +154,18 @@ MySQL 성능 최적화 (우테코)
 ## 23-11-28
 
 이력서 관리
+
 Random Access, Sequential Access 정리
 <hr>
 
 ## 23-11-29
 
-Spring 기초 정리
+Spring - Overview
 <hr>
 
+## 23-11-30
+
+Spring DI, AOP 정리
+개발 블로그 정리
+1202 (12월 3일 review)
+<hr>
