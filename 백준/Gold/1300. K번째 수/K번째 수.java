@@ -2,14 +2,14 @@ import java.util.*;
 
 public class Main {
 	static int answer = 0;
-	public static void input(int start, int end, int k, int n) {
+	static void search(int start, int end, int target, int n) {
 		while(start <= end) {
-			int mid = (start+end)/2;
+			int mid = (start + end)/2;
 			int count = 0;
 			for(int i=1; i<=n; i++) {
-				count += Math.min(mid/i , n);
+				count += Math.min(mid/i, n);
 			}
-			if(count >= k) {
+			if(count >= target) {
 				end = mid - 1;
 				answer = mid;
 			}
@@ -22,7 +22,7 @@ public class Main {
 		Scanner in = new Scanner(System.in);
 		int n = in.nextInt();
 		int k = in.nextInt();
-		input(0 , k, k, n);
+		search(1, k, k, n);
 		System.out.println(answer);
 	}
 }
