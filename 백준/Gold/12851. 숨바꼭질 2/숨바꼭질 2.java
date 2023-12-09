@@ -31,7 +31,7 @@ public class Main {
 					nx = x + dx[i];
 				}
 				if(nx >= 0 && nx < 200001) {
-					if(arr[nx] == INF || arr[nx] >= arr[x] + 1) {
+					if(arr[nx] >= arr[x] + 1) {
 						arr[nx] = arr[x] + 1;
 						pos.offer(nx);
 					}
