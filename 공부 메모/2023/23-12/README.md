@@ -80,6 +80,7 @@ spring batch
 CI/CD
 
 클라우드
+<hr>
 
 ## 23-12-16
 
@@ -94,4 +95,83 @@ Docker
 Spring Cloud Data Flow
 
 동적쿼리/정적쿼리
+<hr>
 
+## 23-12-17
+
+DB 1억건 최적화 방식 학습
+
+ZeroOffsetItemReader 학습
+<hr>
+
+## 23-12-18
+
+Spring MVC 학습
+<hr>
+
+## 23-12-19
+
+커버링 인덱스
+
+Order by Optimization
+
+bulk insert
+<hr>
+
+## 23-12-20
+
+ MVC model
+<hr>
+
+## 23-12-21
+
+
+<hr>
+
+## 23-12-22
+
+slope one algorythm
+
+<hr>
+
+## 23-12-23
+
+2457 (12-26 review)
+<hr>
+
+## 23-12-24
+
+1629 (12-27 review)
+<hr>
+
+## 23-12-25
+
+
+<hr>
+
+## 23-12-26
+
+contents-based 학습
+
+user-based 학습
+<hr>
+
+## 23-12-27
+
+JDK21(LTS) 중 가상스레드(Virtual Thread)학습
+<hr>
+
+## 23-12-28
+
+Prefix index optimization
+<hr>
+
+## 23-12-29
+
+skip locked (Mysql)
+<hr>
+
+## 23-12-30
+
+교착상태
+<hr>
