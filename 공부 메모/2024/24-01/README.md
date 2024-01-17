@@ -86,6 +86,8 @@ Spring 프로젝트 (학사 정보 조회 시스템) (with. 파이썬, Docker, �
 
 -> Controller - Service - DAO - DB 각 컴포넌트 구현 (1. 교과목 조회 구현 완료)
 
+-> python으로 대용량 데이터 만들기 + docker, mysql 사용해서 대용량 데이터 explain analysis select ~ 실험, index 실험
+
 aws 학습(우테코)
 <hr>
 
