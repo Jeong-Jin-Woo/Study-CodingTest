@@ -32,3 +32,14 @@ distinct, date()
 
 17070 (02-10 review)
 <hr>
+
+## 2024-02-09
+
+학사정보 시스템 프로젝트 - 대용량 데이터 처리 (200만개 이상)에서 index와 실행결과 분석 후 최적화
+
+<hr>
+
+## 2024-02-10
+
+offers테이블 row데이터 무작위로 배치하고 index 또는 backward index scan 해결해보기
+<hr>
