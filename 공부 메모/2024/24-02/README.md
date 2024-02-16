@@ -51,3 +51,7 @@ unique index, primary key -> where절로 하면 빠른속도, 아닐경우에는
 order by에 따라서 인덱스를 설정해준다면 풀스캔이 아닌 인덱스로도 개선된 속도를 볼수있다! ->zero offset item reader 고려해보기
 
 <hr>
+
+## 2024-02-16
+
+친절한 sql 튜닝 1장 학습
