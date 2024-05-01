@@ -3,16 +3,20 @@ import java.util.*;
 public class Solution {
 	static int N, L;
 	static int[] score, cal;
+	static boolean[] visit;
 	static int answer = 0;
-	static void dfs(int count, int sum, int happy) {
-		if(count == N) {
-			answer = Math.max(answer, happy);
+	static void dfs(int start, int sum, int happy) {
+		if(sum > L) {
 			return;
 		}
-		if(sum+cal[count] <= L) {
-			dfs(count + 1, sum + cal[count], happy + score[count]);
+		answer = Math.max(answer, happy);
+		for(int i=start; i<N; i++) {
+			if(!visit[i]) {
+				visit[i] = true;
+				dfs(i, sum + cal[i],  happy + score[i]);
+				visit[i] = false;
+			}
 		}
-		dfs(count + 1, sum, happy);
 	}
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -24,6 +28,7 @@ public class Solution {
 	        L = in.nextInt();
 	        score = new int[N];
 	        cal = new int[N];
+	        visit = new boolean[N];
 	        for(int i=0; i<N; i++) {
 	        	score[i] = in.nextInt();
 	        	cal[i] = in.nextInt();
