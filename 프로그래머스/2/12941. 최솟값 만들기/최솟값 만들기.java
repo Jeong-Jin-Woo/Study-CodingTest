@@ -10,7 +10,9 @@ class Solution{
             Bpq.offer(B[i]);
         }
         while(!Apq.isEmpty()){
-            answer += (Apq.remove() * Bpq.remove());
+            int a = Apq.poll();
+            int b = Bpq.poll();
+            answer += a*b;
         }
         return answer;
     }
