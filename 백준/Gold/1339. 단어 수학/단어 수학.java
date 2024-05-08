@@ -3,25 +3,27 @@ public class Main{
 	public static void main(String args[]){
 		Scanner in = new Scanner(System.in);
 		int n = in.nextInt();
-		Integer[] alpha = new Integer[26];
-		Arrays.fill(alpha, 0);
-		String str[] = new String[n];
+		String[] arr= new String[n];
+		int[] alpha = new int[26];
 		for(int i=0; i<n; i++) {
-			str[i] = in.next();
+			arr[i] = in.next();
 		}
-		for(int size=0; size<n; size++) {
-			for(int i=str[size].length()-1, j=1; i>=0; i--, j*=10) {
-				alpha[str[size].charAt(i) - 'A'] += j;
+		for(int i=0; i<n; i++) {
+			for(int j=0; j<arr[i].length(); j++) {
+//				System.out.println(arr[i].charAt(j));
+				alpha[arr[i].charAt(j)-'A'] += Math.pow(10, arr[i].length()-j-1);
 			}
 		}
-		Arrays.sort(alpha, Collections.reverseOrder());
+		PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
+		for(int i=0; i<alpha.length; i++) {
+			pq.offer(alpha[i]);
+		}
 		int answer = 0;
-		for(int i=0, j=9; i<26; i++) {
-			if(alpha[i] != 0) {
-				answer += alpha[i] * j;
-				j = j > 0 ? j - 1 : 0;
-			}
+		int max = 9;
+		while(!pq.isEmpty()) {
+			answer += pq.poll() * max--;
 		}
 		System.out.println(answer);
+		
 	}
 }
