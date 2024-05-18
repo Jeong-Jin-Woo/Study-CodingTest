@@ -3,7 +3,7 @@ public class Solution {
 	static int n, k;
 	static char[] arr;
 	static int max = 0;
-	static void dfs(int count, int sum) {
+	static void dfs(int count) {
 		if(count == k) {
 			String str = "";
 			for(int i=0; i<n; i++) {
@@ -15,7 +15,7 @@ public class Solution {
 		for(int i=0; i<n; i++) {
 			for(int j=i+1; j<n; j++) {
 				change(i, j);
-				dfs(count + 1, i + 1);
+				dfs(count + 1);
 				change(i, j);
 			}
 		}
@@ -39,7 +39,7 @@ public class Solution {
         		arr[i] = str.charAt(i);
         	}
         	if(n < k) k = n;
-        	dfs(0, 0);
+        	dfs(0);
         	
 		System.out.println("#"+test + " " + max);
         }
