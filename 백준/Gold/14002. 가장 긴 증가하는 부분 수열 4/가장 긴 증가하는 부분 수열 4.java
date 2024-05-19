@@ -12,21 +12,23 @@ public class Main{
 		for(int i=0; i<n; i++) {
 			for(int j=i; j<n; j++) {
 				if(arr[i] < arr[j]) {
-					dp[j+1] = Math.max(dp[j + 1] , dp[i+1] + 1);
+					dp[j] = Math.max(dp[j], dp[i] + 1);
 				}
 			}
-			max = Math.max(dp[i+1], max);
 		}
-		System.out.println(max+1);
-		Stack<Integer> s = new Stack<>();
-		for(int i=n, j=max; i>=1; i--) {
-			if(j == dp[i]) {
-				s.push(arr[i-1]);
-				j-=1;
+		for(int i=0; i<n; i++) {
+			max = Math.max(max, dp[i]);
+		}
+		System.out.println(max + 1);
+		Stack<Integer> st = new Stack<>();
+		for(int i=n-1; i>=0; i--) {
+			if(max == dp[i]) {
+				st.push(arr[i]);
+				max -= 1;
 			}
 		}
-		while(!s.isEmpty()) {
-			System.out.print(s.pop() + " ");
+		while(!st.isEmpty()) {
+			System.out.print(st.pop() + " ");
 		}
 	}
 }
